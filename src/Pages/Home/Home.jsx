@@ -10,7 +10,7 @@ const Home = () => {
   console.log(services);
   const [upcimgProducts, setUpcimgProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/upcoming")
+    fetch("https://downtown-adidas-server-rohan1279.vercel.app/upcoming")
       .then((res) => res.json())
       .then((data) => setUpcimgProducts(data));
   }, []);
