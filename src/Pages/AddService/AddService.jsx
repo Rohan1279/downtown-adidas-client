@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const AddService = () => {
   const [service, setService] = useState({});
+  const [serviceImage, setServiceImage] = useState("")
   const handleAddProduct = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -9,6 +10,7 @@ const AddService = () => {
     const price = form.price.value;
     const description = form.description.value;
     const photoUrl = form.photoUrl.value;
+    setServiceImage(photo)
     const newService = { title, price, description, photoUrl };
     console.log(newService);
 
@@ -35,7 +37,7 @@ const AddService = () => {
           <figure className="">
             <img
               className="w-full"
-              src="https://placeimg.com/400/225/arch"
+              src={serviceImage ? serviceImage : "https://placeimg.com/400/225/arch"}
               alt="Shoes"
             />
           </figure>
