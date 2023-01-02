@@ -16,7 +16,7 @@ const UpdateService = () => {
     console.log(newService);
 
     fetch(`http://localhost:5000/services/${storedService._id}`, {
-      method: "PUT",
+      method: "PUT", //update
       headers: {
         "content-type": "application/json",
       },

@@ -13,7 +13,7 @@ const AddService = () => {
     console.log(newService);
 
     fetch("http://localhost:5000/services", {
-      method: "POST",
+      method: "POST", //create
       headers: {
         "content-type": "application/json",
       },
@@ -77,7 +77,11 @@ const AddService = () => {
                   placeholder="product description"
                 />
               </div>
-              <input type="submit" value="Submit" className="p-4 text-2xl mt-3 w-full bg-secondary-color border border-zinc-300 rounded-md  transition-all hover:shadow-nm hover:bg" />
+              <input
+                type="submit"
+                value="Submit"
+                className="p-4 text-2xl mt-3 w-full bg-secondary-color border border-zinc-300 rounded-md  transition-all hover:shadow-nm hover:bg"
+              />
             </form>
             <div className="card-actions justify-end">
               {/* <button className="btn btn-primary">Buy Now</button> */}

@@ -32,12 +32,12 @@ const Navbar = () => {
           <div className="flex lg:flex-1">
             <img
               className="block h-8 w-auto lg:hidden"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+              src="https://www.logolynx.com/images/logolynx/3a/3a873fdb1100c6dfd6e2784de335d0a2.png"
               alt="Your Company"
             />
             <img
               className="hidden h-8 w-auto lg:block"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+              src="https://www.logolynx.com/images/logolynx/3a/3a873fdb1100c6dfd6e2784de335d0a2.png"
               alt="Your Company"
             />
           </div>

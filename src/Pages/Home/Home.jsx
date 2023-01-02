@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Banner from "../../componets/Banner";
 import ServiceCard from "../../componets/ServiceCard";
 
 const Home = () => {
   const services = useLoaderData();
+
   const [displayServices, setDisplayServices] = useState(services);
   console.log(services);
+  const [upcimgProducts, setUpcimgProducts] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/upcoming")
+      .then((res) => res.json())
+      .then((data) => setUpcimgProducts(data));
+  }, []);
+
   const handleDeleteProduct = (service) => {
     console.log(service);
     const agree = window.confirm(
@@ -30,7 +38,6 @@ const Home = () => {
   };
   const handleUpdateProduct = (service) => {
     console.log(service);
-    
   };
   return (
     <div className="px-14">
@@ -39,6 +46,18 @@ const Home = () => {
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-2">
         {displayServices.map((service) => (
+          <ServiceCard
+            handleDeleteProduct={handleDeleteProduct}
+            handleUpdateProduct={handleUpdateProduct}
+            service={service}
+            key={service._id}
+          />
+        ))}
+      </div>
+      <h1 className="text-center text-4xl font-extrabold my-5">Upcoming products</h1>
+
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-2">
+        {upcimgProducts.map((service) => (
           <ServiceCard
             handleDeleteProduct={handleDeleteProduct}
             handleUpdateProduct={handleUpdateProduct}
