@@ -6,10 +6,6 @@ const Contact = () => {
     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
       Discover Our Team
     </p>
-    <p className="text-base text-gray-700 md:text-lg">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-      accusantium doloremque laudantium.
-    </p>
   </div>
   <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:max-w-screen-lg">
     <div>
@@ -47,7 +43,7 @@ const Contact = () => {
       <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
         <img
           className="absolute object-cover w-full h-full rounded"
-          src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+          src="https://scontent.fdac10-1.fna.fbcdn.net/v/t1.15752-9/322596702_718710683003328_233486628715887062_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFtT_Ovj-q0Nb8xQ7yWnw8iNNhg18jpbPA02GDXyOls8O8OrLRSJf-4EsqsvQBWS7NfpGAURluo2b0S7mQfEYGH&_nc_ohc=YrKGlA3bQioAX-2m6jU&_nc_ht=scontent.fdac10-1.fna&oh=03_AdQqy1o6knOwx3gfRHcIpbjMekIJK0LDlgYmX0aRmjTcPg&oe=63D9E471"
           alt="Person"
         />
       </div>
@@ -78,7 +74,7 @@ const Contact = () => {
       <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
         <img
           className="absolute object-cover w-full h-full rounded"
-          src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+          src="https://scontent.fdac10-1.fna.fbcdn.net/v/t39.30808-6/272180135_3149689128607335_6044044210109259638_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_eui2=AeHcxgjT2LRcGboo6lHQAWGURkTMLbglW11GRMwtuCVbXY9gkZYmoPS3GOjtgal2ITsoeHMpWeixKex0dc14NFHf&_nc_ohc=YiGoXQICk2cAX8H16R7&_nc_ht=scontent.fdac10-1.fna&oh=00_AfCf7bvLlqkq_8YrE1rQquBTWPEz94I2kSEqDQ9uSRF6qA&oe=63B7EEBA"
           alt="Person"
         />
       </div>

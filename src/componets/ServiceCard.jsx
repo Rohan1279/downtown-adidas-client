@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const ServiceCard = ({ service, handleDeleteProduct, handleUpdateProduct }) => {
   return (
-    <div className="card w-80 mx-auto bg-base-100 shadow-xl">
+    <div className="card w-80 mx-auto bg-base-100 shadow-nm">
       <figure>
         <img src={service.photoUrl} alt="product" />
       </figure>
