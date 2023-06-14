@@ -43,12 +43,12 @@ const Home = () => {
     console.log(service);
   };
   return (
-    <div className="px-14">
+    <div className="px-14 py-5">
       <Banner />
       <h1 className="text-center text-4xl font-extrabold my-5">All products</h1>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-2">
-        {displayServices.map((service) => (
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5">
+        {displayServices?.map((service) => (
           <ServiceCard
             handleDeleteProduct={handleDeleteProduct}
             handleUpdateProduct={handleUpdateProduct}
@@ -62,7 +62,7 @@ const Home = () => {
       </h1>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-2">
-        {upcimgProducts.map((service) => (
+        {upcimgProducts?.map((service) => (
           <ServiceCard
             handleDeleteProduct={handleDeleteProduct}
             handleUpdateProduct={handleUpdateProduct}

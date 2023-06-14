@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const AddService = () => {
+  const imgRef = useRef()
   const [service, setService] = useState({});
+  const [serviceImgae, setServiceImgae] = useState("")
   const handleAddProduct = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -28,14 +30,19 @@ const AddService = () => {
         console.log(data);
       });
   };
+  const handleAddPhoto = (e) => {
+    console.log(e.target.value)
+    setServiceImgae(e.target.value)
+  }
   return (
     <div className="">
       <div className="w-full">
         <div className="card w-[450px] shadow-nm mx-auto my-10 ">
           <figure className="">
             <img
+              ref={imgRef}
               className="w-full"
-              src="https://placeimg.com/400/225/arch"
+              src={serviceImgae ? serviceImgae : "https://placeimg.com/400/225/arch"}
               alt="Shoes"
             />
           </figure>
@@ -44,6 +51,7 @@ const AddService = () => {
               <div className="flex my-3 space-x-2 justify-start">
                 <h1 className="card-title">Photo</h1>
                 <input
+                  onChange={handleAddPhoto}
                   name="photoUrl"
                   type="text"
                   className="shadow-nm-inset p-2 px-3 rounded-full bg-secondary-color w-full"
