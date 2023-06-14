@@ -15,13 +15,16 @@ const UpdateService = () => {
     const newService = { title, price, description, photoUrl };
     console.log(newService);
 
-    fetch(`http://localhost:5000/services/${storedService._id}`, {
-      method: "PUT", //update
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newService),
-    })
+    fetch(
+      `https://downtown-adidas-server.vercel.app/services/${storedService._id}`,
+      {
+        method: "PUT", //update
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newService),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

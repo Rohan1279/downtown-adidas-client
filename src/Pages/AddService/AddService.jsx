@@ -12,7 +12,7 @@ const AddService = () => {
     const newService = { title, price, description, photoUrl };
     console.log(newService);
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://downtown-adidas-server.vercel.app/services", {
       method: "POST", //create
       headers: {
         "content-type": "application/json",

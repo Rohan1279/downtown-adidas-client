@@ -14,12 +14,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:5000/services"),
+        loader: () =>
+          fetch("https://downtown-adidas-server.vercel.app/services"),
         element: <Home />,
       },
       {
         path: "/services",
-        loader: () => fetch("http://localhost:5000/services"),
+        loader: () =>
+          fetch("https://downtown-adidas-server.vercel.app/services"),
         element: <Services />,
       },
       {
@@ -37,7 +39,9 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(
+            `https://downtown-adidas-server.vercel.app/services/${params.id}`
+          ),
         element: <UpdateService />,
       },
     ],
